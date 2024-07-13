@@ -1,10 +1,3 @@
-var menuIcon = new menuIcon(".text", {
-    Strings:["Sketcher" , "Digital Artist" , "Cooking"],
-    typeSpeed: 100,
-    backSpeed: 100,
-    backDelay: 1000,
-    loop: true
-});
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 let sections = document.querySelectorAll('section');

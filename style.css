@@ -7,13 +7,13 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: "Poppins", sans-serif;
+    font-family: "Black Chancery", "Amaze";
 }
 :root {
     --bg-color: #080808;
     --second-bg-color: #131313;
     --text-color: white;
-    --main-color: #00ffee; 
+    --main-color: #00ff40; 
 }
 
 html{
@@ -38,7 +38,7 @@ body{
     align-items: center;
     z-index: 5;
 }
-.logo{
+.logo {
     position: relative;
     font-size: 3rem;
     color: var(--text-color);
@@ -111,7 +111,7 @@ body{
     margin-bottom: 30px;
    }
    .home-content h3 span {
-    color:#00ffee;
+    color:#00ff40;
    }
    .home-content h1{
     font-size: 7rem;
@@ -196,70 +196,47 @@ body{
     background-color: var(--main-color);
     color: black;
    }
-   .text-animation{
+ 
+   .text-animation {
     font-size: 34px;
     font-weight: 600;
-    min-width: 280px;
-   }
-   .text-animation span{
-    position: relative;
-   }
-   .text-animation span::before{
-    content: "Sketcher";
-    color: var(--main-color);
-    animation: words 10s infinite;
-   }
-   .text-animation span::after{
-    content: "";
-    background-color: var(--bg-color);
-    position: absolute;
-    width: calc(100%  + 8px);
-    height: 100%;
-    border-left: 3px solid var(--bg-color);
-    right: -8px;
-    animation: cursor 0.6s infinite, typing 15s steps
-    (14) infinite;
-   }
+    display: inline-block;
+    animation: fadeInOut 3s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+.text-animation2 {
+    font-size: 34px;
+    font-weight: 600;
+    display: inline-block;
+    animation: fadeInOut 4s ease-in-out infinite;
+    animation-delay: 4s;
+}
+
+.text-animation3 {
+    font-size: 34px;
+    font-weight: 600;
+    display: inline-block;
+    animation: fadeInOut 5s ease-in-out infinite;
+    animation-delay: 6s; /* Adjusted delay to avoid overlap */
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
    @keyframes cursor{
    to{
     border-left: 2px solid var(--main-color);
    }
 }
-@keyframes words{
-    0%,
-    20%{
-        content: "Digital Artist";
-    }
-    21%,
-    40%{
-        content: "Cooking";
-    }
-}
-@keyframes typing{
-    10%, 
-    15%,
-    30%,
-    35%,
-    50%,
-    55%,
-    70%,
-    75%,
-    90%,
-    95%{
-        width: 0;
-    }
-    5%,
-    20%,
-    25%,
-    40%,
-    45%,
-    60%,
-    65%,
-    80%,
-    85%{
-        width: calc(100% + 8px);
-    }  
-}
+
+
 .heading{
     font-size: 8rem;
     text-align: center;
@@ -649,26 +626,3 @@ body{
         grid-template-columns: repeat(1,1fr);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-     
-   
-
-
-
-
-  
-
